@@ -1,10 +1,10 @@
 # Sample ETL Data Job
 
-This is a companion project for the post [ETL Job Processing with Serverless and AWS Redshift](https://serverless.com/blog/etl-job-processing-with-serverless-lambda-and-redshift/).
+This is a study project to build a ETL job AWS Lambda.
 
 ## Pre-requisites
 
-Setting up AWS Redshift is out of scope of this sample, but we need one set up to dump data into it from our ETL job. Once you have it set up and configured, keep the cluster endpoint in Redshift handy, as we will need it later to configure the database connection string.
+Setting up AWS RDS/or database is out of scope of this sample, but we need one set up to dump data into it from our ETL job. Once you have it set up and configured, you will need to add a enviroment variable, DB_CONN with a swlalchemy like url with all credential, cryptographed.
 
 ### Redshift cluster endpoint
 
@@ -18,12 +18,6 @@ where `<hostname>:<port>` is the cluster endpoint
 ## Install dependencies
 
 `$ pip install -r requirements.txt`
-
-## Install plugins
-
-`$ sls plugin install -n serverless-python-requirements`
-
-This will install the plugin and will add the `plugins` section in the `serverless.yml` file.
 
 ## Run locally
 
